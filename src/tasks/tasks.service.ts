@@ -6,7 +6,24 @@ import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
 
 @Injectable()
 export class TasksService {
-  private tasks: Task[] = [];
+  private tasks: Task[] = [{
+    id: 'asljkdn-dasdjna-asldjkan-asdjklna',
+    title: 'Taskl',
+    description: 'Description1',
+    status: TaskStatus.OPEN
+  },
+  {
+    id: 'asasdljkdn-dasdjna-asldjkan-asdjklna',
+    title: 'Task2',
+    description: 'Description2',
+    status: TaskStatus.IN_PROGRESS
+  },
+  {
+    id: 'assdasasdljkdn-dasdjna-asldjkan-asdjklna',
+    title: 'Task3',
+    description: 'Description3',
+    status: TaskStatus.DONE
+  }];
 
   getAllTasks(): Task[] {
     return this.tasks;
